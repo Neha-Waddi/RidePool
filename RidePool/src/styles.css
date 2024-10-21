@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width:68%; /* Decrease width to match */
+  height: auto;
+  display: block; /* Center horizontally */
+  margin: 0 auto; /* Center image */
+}
+
+h1, h2, h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #555;
+}
+
+/* Header Section */
+.header-section {
+  background-color: white;
+  text-align: center;
+  padding: 20px 20px; /* More padding at the top */
+}
+
+.header-section h1 {
+  font-size: 48px; /* Increase font size */
+  font-weight: bold;
+  letter-spacing: 2px; /* Add spacing between letters */
+}
+
+.header-section p {
+  font-size: 24px; /* Increase font size */
+  color: #007BFF; /* Match the blue theme */
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 10px;
+  flex-wrap: nowrap;
+  gap:20px;
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+.card {
+  flex: 1 1 30%;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 280px; /* Ensure cards don’t get too small */
+}
+
+.card i {
+  font-size: 50px;
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+/* Call to Action Section */
+.cta-section {
+  background-color: #A2D2E5;
+  padding: 20px 10px; /* More padding to make it prominent */
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 30px; /* Increase the heading size */
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.cta-section p {
+  font-size: 18px; /* Make text larger */
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.cta-button {
+  padding: 18px 40px; /* Increase button size */
+  background-color: #3d91b2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px; /* Increase font size */
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}

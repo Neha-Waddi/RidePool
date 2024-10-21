@@ -1,0 +1,97 @@
+  .search-vehicle-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 80vw;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #4c95de;
+    margin-top: 2px;
+    margin-bottom: 1px;
+    font-family: monospace;
+  }
+  
+  h3 {
+    text-align: center;
+    color: #053779;
+    margin-top: 1px;
+    margin-bottom: 40px;
+  }
+  
+  .tripdetails-bar {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid #727d8c;
+    border-radius: 4px;
+    padding: 5px;
+    width: 67%;
+    margin-left: 30px;
+  }
+  
+  .components {
+    display: flex;
+    flex-direction:row;
+    flex:1;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+ 
+  .icon {
+    margin-right: 2px;
+    color: #0565c5;
+    font-size: 20px;
+  }
+  
+  .icon-name {
+    color: #727d8c;
+    font-size: x-small;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-top: 1px;
+    white-space:nowrap;
+  }
+  
+  input[type="text"]{
+    background-color: white;
+    margin-bottom: 1px;
+    margin-right: 10px;
+    width: 70%; 
+    border-style: none;
+    color: #727d8c;
+    padding: 8px;
+    border: 1px solid #ccc; 
+    border-radius: 3px; 
+  }
+
+  input[type="date"] {
+    background-color: white;
+    margin-bottom: 1px;
+    margin-right: 5px;
+    width: 40%; 
+    border-style: none;
+    color: #727d8c;
+    padding: 8px;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+  }
+.search-button {
+    background-color: #3399FF;
+    color: white;
+    border: none; 
+    font-size: 16px;
+    border-radius: 3px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    margin-right: 10px;
+  }
+  
+.search-button:hover {
+    background-color: #2672CC; 
+  }
