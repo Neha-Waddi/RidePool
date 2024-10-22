@@ -12,8 +12,6 @@ const SearchVehicle = () => {
       alert('Please fill in all fields!');
       return;
     }
-
-    // Replace this placeholder data with your actual search logic
     setSearchResults([
       { id: 1, vehicle: 'Car', time: '14:00', date: '2024-10-17' },
       { id: 2, vehicle: 'Bus', time: '15:00', date: '2024-10-17' },
