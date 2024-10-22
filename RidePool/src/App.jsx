@@ -1,17 +1,19 @@
 import './styles.css';
 import SearchVehicle from './components/search/SearchVehicle'
-import homeImage from './assets/home_image.png'
+import car_image from './assets/car_image.png'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Footer from './components/footer/Footer';
+import Navbar from './components/navbar/Navbar';
 
 const App = () => {
   return (
     <div>
+      <Navbar/>
       <SearchVehicle/>
     <div className="page">
       {/* Header Section */}
       <section className="header-section">
-        <img src={homeImage} alt="Carpooling.com" />  
+        <img src={car_image} alt="Carpooling.com" />  
       </section>
 
       {/* Main Content */}
