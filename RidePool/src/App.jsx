@@ -33,7 +33,7 @@ const App = () => {
       </section>
       <section className="cta-section">
         <h2>DRIVING IN YOUR CAR SOON?</h2>
-        <p>Let's make this your least expensive journey ever.</p>
+        <p>Let's make this your least expensive journey ever !!</p>
         <button className="cta-button">OFFER RIDE</button>
       </section>
     </div>
