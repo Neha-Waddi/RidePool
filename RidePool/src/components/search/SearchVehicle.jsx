@@ -1,21 +1,37 @@
-import React, { useState } from 'react';
-import {  FaMapMarkerAlt, FaCalendarAlt, FaClock } from 'react-icons/fa';
-import './SearchVehicle.css';
+import React, { useState } from "react";
+import { FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
+import "./SearchVehicle.css";
 
 const SearchVehicle = () => {
-  const [fromLocation, setFromLocation] = useState('');
-  const [toLocation, setToLocation] = useState('');
-  const [date, setDate] = useState('');
+  const [fromLocation, setFromLocation] = useState("");
+  const [toLocation, setToLocation] = useState("");
+  const [dateOption, setDateOption] = useState("All");
+  const [customDate, setCustomDate] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = () => {
-    if (!fromLocation || !toLocation || !date) {
-      alert('Please fill in all fields!');
+    const selectedDate =
+      dateOption === "Today"
+        ? getTodayDate()
+        : dateOption === "Tomorrow"
+        ? getTomorrowDate()
+        : dateOption === "Custom"
+        ? customDate
+        : "All";
+
+    if (!fromLocation || !toLocation || (dateOption === "Custom" && !customDate)) {
+      alert("Please fill in all fields!");
       return;
     }
-    setSearchResults([
-      { id: 1, vehicle: 'Car', time: '14:00', date: '2024-10-17' },
-      { id: 2, vehicle: 'Bus', time: '15:00', date: '2024-10-17' },
-    ]);
+
+  };
+
+  const getTodayDate = () => new Date().toISOString().split("T")[0];
+
+  const getTomorrowDate = () => {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    return tomorrow.toISOString().split("T")[0];
   };
 
   return (
@@ -48,13 +64,31 @@ const SearchVehicle = () => {
         <div className="components">
           <FaCalendarAlt className="icon" />
           <p className="icon-name">Departure Date</p>
-          <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+          <select
+            value={dateOption}
+            onChange={(e) => setDateOption(e.target.value)}
+            className="date-selector "
+          >
+            <option value="All">All</option>
+            <option value="Today">Today</option>
+            <option value="Tomorrow">Tomorrow</option>
+            <option value="Custom">Custom</option>
+          </select>
+
+          {dateOption === "Custom" && (
+            <input
+              type="date"
+              value={customDate}
+              onChange={(e) => setCustomDate(e.target.value)}
+            />
+          )}
         </div>
 
-        <button  className="search-button" onClick={handleSearch}>
+        <button className="search-button" onClick={handleSearch}>
           SEARCH
         </button>
       </div>
+
     </div>
   );
 };

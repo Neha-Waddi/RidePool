@@ -98,3 +98,9 @@
 .search-button:hover {
     background-color: #2672CC; 
   }
+
+  .date-selector {
+    background-color: white;
+    color:#727d8c;
+    margin-right: 3px;
+  }
