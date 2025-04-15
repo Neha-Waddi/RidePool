@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: aliceblue;
+    color: #000;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.car-logo img{
+    width: 90px;
+    height: 90px;
+    top: 5px;
+    left:30px
+}
+
+.textbox{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.textbox form{
+    width: 70%;
+    display: flex;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    margin-left: 15px;
+}
+
+.textbox input{
+    border: none;
+    height: 35px;
+    width: 75%;
+    background-color: white;
+    
+}
+
+.textbox form button:first-child{
+    background: white;
+}
+
+.textbox form button:last-child{
+    width: 25%;
+    background-color: hsl(219, 86%, 50%);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    padding: 5px 3px;
+    border-radius: 10px;
+}
+
+
+.rideprofile{
+    width: 20%;
+    height: 100%;
+}
+
+.rideprofile ul{
+    width:100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+}
+
+.rideprofile ul li i{
+    font-size: 35px;
+    color: hsl(219, 86%, 50%);
+}
+.rideprofile ul li b{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+}
+
+
+
+.rideprofile ul li i:hover{
+    color: rgb(58, 127, 255);
+}
